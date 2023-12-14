@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/**
+ * interactive -
+ * @info:
+ *
+ * Return:
+ */
+
 int interactive(info_t *info)
 {
 	return (isatty(STDIN_FILENO) && info->readfd <= 2);
