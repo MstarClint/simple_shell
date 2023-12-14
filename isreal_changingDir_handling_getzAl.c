@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * cd_dot - 
- * @datash: 
- * Return: 
+ *cd_dot - Performs a relative directory change based on the second argument.
+ *@datash: Pointer to the data shell structure containing environment variables and status.
+ *Return: void - sets the status field of the data shell structure to 0 on success.
  */
 void cd_dot(data_shell *datash)
 {
@@ -50,10 +50,9 @@ void cd_dot(data_shell *datash)
 }
 
 /**
- * cd_to - 
- *
- * @datash: 
- * Return: 
+ *cd_to - Attempts to change the working directory to the specified path.
+ *@datash: Pointer to the data shell structure containing environment variables and status.
+ *Return: void - sets the status field of the data shell structure to 0 on success and updates the `OLDPWD` and `PWD` environment variables.
  */
 void cd_to(data_shell *datash)
 {
@@ -84,10 +83,9 @@ void cd_to(data_shell *datash)
 }
 
 /**
- * cd_previous - 
- *
- * @datash: 
- * Return: 
+ * cd_previous - Changes the working directory to the previously used directory and prints it to the console.
+ *@datash: Pointer to the data shell structure containing environment variables and status.
+ *Return: void - sets the status field of the data shell structure to 0 on success and updates the `OLDPWD` and `PWD` environment variables.
  */
 void cd_previous(data_shell *datash)
 {
@@ -126,10 +124,9 @@ void cd_previous(data_shell *datash)
 }
 
 /**
- * cd_to_home - 
- *
- * @datash: 
- * Return: 
+ * cd_to_home - Navigates to the user's home directory.
+ *@datash: Pointer to the data shell structure containing environment variables and status.
+ *Return: void - sets the status field of the data shell structure to 0 on success and updates the `OLDPWD` environment variable.
  */
 void cd_to_home(data_shell *datash)
 {

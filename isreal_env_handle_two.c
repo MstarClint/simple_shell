@@ -25,9 +25,9 @@ char *copy_info(char *name, char *value)
 }
 
 /**
- * set_env - 
+ * set_env -
  *
- * @name: 
+ * @name:
  * @value: 
  * @datash: 
  * Return: 
@@ -57,7 +57,7 @@ void set_env(char *name, char *value, data_shell *datash)
 }
 
 /**
- * _setenv - 
+ * _seten`v - 
  * @datash: 
  *
  * Return: 

@@ -1,10 +1,12 @@
-#include "shell.h"
+include "shell.h"
 
 /**
- * repeated_char - 
- * @input: 
- * @i: 
- * Return: 
+ * repeated_char - Counts the consecutive occurrences of a character in a string.
+ *
+ * @input: Pointer to the character string to analyze.
+ * @i: Initial counter value (assumed to be 1 for the first character).
+ *
+ * Return: The number of consecutive occurrences of the current character in the string, starting from the position pointed to by input.
  */
 int repeated_char(char *input, int i)
 {
@@ -15,11 +17,13 @@ int repeated_char(char *input, int i)
 }
 
 /**
- * error_sep_op - 
- * @input: 
- * @i: 
- * @last: 
- * Return: 
+ * error_sep_op - Detects syntactically incorrect separator or operator placement in a shell command string.
+ *
+ * @input: Pointer to the current character in the command string.
+ * @i: Counter for the character position within the string (starts at 1).
+ * @last: The character code of the previously analyzed character.
+ *
+ * Return: The character position (starting at 1) at which an error is detected, or 0 if no errors are found.
  */
 int error_sep_op(char *input, int i, char last)
 {
@@ -66,10 +70,12 @@ int error_sep_op(char *input, int i, char last)
 }
 
 /**
- * first_char - 
- * @input: 
- * @i:
- * Return: 
+ * first_char - Identifies the first non-whitespace, non-operator character in a string.
+ *
+ * @input: Pointer to the null-terminated character string.
+ * @i: Pointer to an integer variable to store the index of the first valid character.
+ *
+ * Return: 0 on success (valid character found), -1 on error (only whitespace or operators found).
  */
 int first_char(char *input, int *i)
 {
@@ -88,12 +94,12 @@ int first_char(char *input, int *i)
 }
 
 /**
- * print_syntax_error - 
- * @datash: 
- * @input: 
- * @i: 
- * @bool: 
- * Return: 
+ * print_syntax_error - Prints a syntax error message to standard error.
+ * @datash: Pointer to the data structure containing shell information.
+ * @input: Pointer to the command string where the error occurred.
+ * @i: Index of the character in the string that caused the error.
+ * @bool: Boolean flag indicating the direction of the error (0: after, 1: before).
+ * Return: 0 on success, -1 if the first character is a syntax error (;, |, &).
  */
 void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 {
@@ -140,10 +146,12 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 }
 
 /**
- * check_syntax_error - 
- * @datash: 
- * @input: 
- * Return: 
+ * check_syntax_error - Analyzes a shell command for syntactical errors.
+ *
+ * @datash: Pointer to the data structure containing shell information.
+ * @input: Pointer to the null-terminated command string to be analyzed.
+ *
+ * Return: 0 on success (no errors found), 1 on error (syntax error detected).
  */
 int check_syntax_error(data_shell *datash, char *input)
 {

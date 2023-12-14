@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * cd_shell - 
- * @datash: 
- * Return: 
+ * cd_shell - Handles shell 'cd' command functionality.
+ * @datash: Pointer to the data structure containing shell information.
+ * Return: 1 on successful execution, non-zero otherwise.
  */
 int cd_shell(data_shell *datash)
 {
