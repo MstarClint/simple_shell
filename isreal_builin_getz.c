@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * get_builtin - 
- * @cmd: 
- * Return: 
+ * get_builtin -
+ * @cmd:
+ * Return:
  */
 int (*get_builtin(char *cmd))(data_shell *)
 {
