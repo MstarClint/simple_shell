@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * get_builtin - 
- * @cmd: 
- * Return: 
+ * get_builtin -  Retrieves the built-in function associated with a given command
+ * @cmd:  A null-terminated string representing the command to be looked up.
+ * Return: A pointer to the function associated with the command, or NULL if not found.
  */
 int (*get_builtin(char *cmd))(data_shell *)
 {
