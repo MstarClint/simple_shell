@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _strdup - 
- * @s: 
- * Return: 
+ * _strdup - Duplicates a string
+ * @s: The null-terminated string to duplicate.
+ * Return: A newly allocated null-terminated copy of the string, or NULL on failure.
  */
 char *_strdup(const char *s)
 {
@@ -19,9 +19,9 @@ char *_strdup(const char *s)
 }
 
 /**
- * _strlen - 
- * @s: 
- * Return: 
+ * _strlen - Gets the length of a null-terminated string
+ * @s: The null-terminated string to measure.
+ * Return: The length of the string (excluding the null terminator).
  */
 int _strlen(const char *s)
 {
@@ -34,11 +34,11 @@ int _strlen(const char *s)
 }
 
 /**
- * cmp_chars - 
- * @str: 
- * @delim: 
+ * cmp_chars - Checks if characters in a string match any in a delimiter
+ * @str: The null-terminated string to compare.
+ * @delim: The null-terminated delimiter characters to check against.
  *
- * Return: 
+ * Return: 1 if all characters in 'str' are present in 'delim', 0 otherwise.
  */
 int cmp_chars(char str[], const char *delim)
 {
@@ -61,11 +61,11 @@ int cmp_chars(char str[], const char *delim)
 }
 
 /**
- * _strtok - 
- * @str: 
- * @delim: 
+ * _strtok - Tokenizes a string based on a delimiter (stateful)
+ * @str: The null-terminated string to tokenize (initially or subsequently).
+ * @delim: The null-terminated delimiter characters
  *
- * Return: 
+ * Return: A pointer to the first token, or NULL if no more tokens or invalid input.
  */
 char *_strtok(char str[], const char *delim)
 {
@@ -111,10 +111,10 @@ char *_strtok(char str[], const char *delim)
 }
 
 /**
- * _isdigit - 
+ * _isdigit - Checks if all characters in a string are digits
  *
- * @s: 
- * Return: 
+ * @s: The null-terminated string to analyze
+ * Return:  1 if all characters are digits, 0 otherwise.
  */
 int _isdigit(const char *s)
 {
