@@ -1,11 +1,13 @@
 #include "shell.h"
 
 /**
- * copy_info - 
- * @name: 
- * @value: 
+ * copy_info - Creates a new string combining a name and value with a "=" delimiter.
  *
- * Return: 
+ * @name: Pointer to the name string.
+ * @value: Pointer to the value string.
+ *
+ * Return: Pointer to a newly allocated string containing the combined name-value pair 
+ * with a "=" delimiter and a terminating null character, or NULL on error
  */
 char *copy_info(char *name, char *value)
 {
@@ -25,12 +27,13 @@ char *copy_info(char *name, char *value)
 }
 
 /**
- * set_env -
+ * set_env - Sets the value of an environment variable in the shell data structure.
  *
- * @name:
- * @value: 
- * @datash: 
- * Return: 
+ * @name: Pointer to the name of the environment variable to set.
+ * @value: Pointer to the new value for the environment variable.
+ * @datash: Pointer to the shell data structure containing the environment.
+ *
+ * Return: void 
  */
 void set_env(char *name, char *value, data_shell *datash)
 {
@@ -57,10 +60,11 @@ void set_env(char *name, char *value, data_shell *datash)
 }
 
 /**
- * _seten`v - 
- * @datash: 
+ * _setenv - Handles the shell's "setenv" command.
  *
- * Return: 
+ * @datash: Pointer to the shell data structure.
+ *
+ * Return: 1 on success, 0 on error.
  */
 int _setenv(data_shell *datash)
 {
@@ -77,11 +81,11 @@ int _setenv(data_shell *datash)
 }
 
 /**
- * _unsetenv - 
+ * _setenv - Handles the shell's "setenv" command.
  *
- * @datash: 
+ * @datash: Pointer to the shell data structure.
  *
- * Return: 
+ * Return: 1 on success, 0 on error.
  */
 int _unsetenv(data_shell *datash)
 {

@@ -1,4 +1,4 @@
-include "shell.h"
+#include "shell.h"
 
 /**
  * repeated_char - Counts the consecutive occurrences of a character in a string.

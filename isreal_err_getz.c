@@ -1,10 +1,12 @@
 #include "shell.h"
 
 /**
- * get_error - 
- * @datash: 
- * @eval: 
- * Return: 
+ * get_error - Sets and displays an error message based on a provided error code.
+ *
+ * @datash: Pointer to the shell data structure.
+ * @eval: Integer code representing the specific error type.
+ *
+ * Return: The provided error code, updating the shell's internal status as well.
  */
 int get_error(data_shell *datash, int eval)
 {
